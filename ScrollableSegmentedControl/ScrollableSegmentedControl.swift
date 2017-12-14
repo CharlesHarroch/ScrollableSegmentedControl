@@ -202,6 +202,15 @@ public enum ScrollableSegmentedControlSegmentStyle: Int {
     }
     
     /**
+     Removes all segment from the receiver.
+     */
+    @objc public func removeSegment(at segment: Int){
+        segmentsData.removeAll()
+        reloadSegments()
+    }
+    
+    
+    /**
      Returns the number of segments the receiver has.
      */
     @objc public var numberOfSegments: Int { return segmentsData.count }
